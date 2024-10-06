@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Inter:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./null.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__body">
+          <div class="header__left">
+            <img src="./img/logo.svg" alt="" class="header__logo" />
+            <nav class="header__nav"></nav>
+          </div>
+          <div class="header__right">
+            <input type="text" class="header__search" placeholder="Поиск..." />
+            <button class="header__basket">
+              <span>Корзина</span>
+              <span class="separator"></span>
+              <span class="header__count">0</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="products">
+        <h2 class="products__title">Веганская</h2>
+        <div class="container">
+          <div class="products__body" id="1"></div>
+        </div>
+      </section>
+      <section class="products">
+        <h2 class="products__title">Веганская</h2>
+        <div class="container">
+          <div class="products__body" id="2"></div>
+        </div>
+      </section>
+      <section class="products">
+        <h2 class="products__title">Веганская</h2>
+        <div class="container">
+          <div class="products__body" id="3"></div>
+        </div>
+      </section>
+      <section class="products">
+        <h2 class="products__title">Веганская</h2>
+        <div class="container">
+          <div class="products__body" id="4"></div>
+        </div>
+      </section>
+    </main>
+    <template class="category__template">
+      <a href="" class="header__link"></a>
+    </template>
+    <template class="product__template">
+      <div class="product">
+        <div class="product__top">
+          <img src="" alt="" class="product__img" />
+          <h3 class="product__name"></h3>
+          <h4 class="product__description"></h4>
+        </div>
+        <div class="product__bottom">
+          <span class="product__price"></span>
+          <button class="product__button">Выбрать</button>
+        </div>
+      </div>
+    </template>
+    <template class="cart__template">
+      <div class="cart__item">
+        <div class="cart__top">
+          <div class="cart__left">
+            <img src="" alt="" class="cart__img" />
+            <div class="cart__info">
+              <h3 class="cart__name"></h3>
+              <h4 class="cart__weights"></h4>
+            </div>
+          </div>
+          <button class="cart__delete">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="10"
+              height="10"
+              fill="none"
+              viewBox="0 0 25 25"
+              class="sc-1cyl9gi-1 dJLpvD"
+            >
+              <path
+                fill="black"
+                fill-rule="evenodd"
+                d="M9.846 12.499.553 3.205A1.878 1.878 0 0 1 3.208.55L12.5 9.843l9.291-9.29a1.878 1.878 0 0 1 2.655 2.655l-9.29 9.29 9.293 9.294a1.878 1.878 0 0 1-2.655 2.655L12.5 15.154 3.205 24.45A1.878 1.878 0 0 1 .55 21.795z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div class="cart__bottom">
+          <p class="cart__price"></p>
+          <div class="cart__btn">
+            <button class="cart__minus">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="10"
+                height="10"
+                viewBox="0 0 10 10"
+                class="icon"
+              >
+                <rect width="10" height="2" y="4" fill="#454B54" rx="1"></rect>
+              </svg>
+            </button>
+            <span class="cart__count">0</span>
+            <button class="cart__plus">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="10"
+                height="10"
+                viewBox="0 0 10 10"
+                class="icon"
+              >
+                <g fill="#454B54">
+                  <rect width="2" height="10" x="4" ry="1"></rect>
+                  <rect width="10" height="2" y="4" rx="1"></rect>
+                </g>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </template>
+    <div class="modal">
+      <div class="modal__container">
+        <button class="modal__close">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="25"
+            height="25"
+            fill="none"
+            viewBox="0 0 25 25"
+            class="sc-1cyl9gi-1 dJLpvD"
+          >
+            <path
+              fill="#fff"
+              fill-rule="evenodd"
+              d="M9.846 12.499.553 3.205A1.878 1.878 0 0 1 3.208.55L12.5 9.843l9.291-9.29a1.878 1.878 0 0 1 2.655 2.655l-9.29 9.29 9.293 9.294a1.878 1.878 0 0 1-2.655 2.655L12.5 15.154 3.205 24.45A1.878 1.878 0 0 1 .55 21.795z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
+        <div class="modal__left">
+          <img src="" alt="" class="modal__img" />
+        </div>
+        <div class="modal__right">
+          <h2 class="modal__title"></h2>
+          <h3 class="modal__subtitle"></h3>
+          <p class="modal__description"></p>
+          <div class="modal__table">
+            <h4 class="modal__info">Пищевая ценность на 100 г</h4>
+            <div class="modal__row">
+              <span>Энерг. ценность</span>
+              <span class="modal__value"></span>
+            </div>
+            <div class="modal__row">
+              <span>Белки</span>
+              <span class="modal__value"></span>
+            </div>
+            <div class="modal__row">
+              <span>Жиры</span>
+              <span class="modal__value"></span>
+            </div>
+            <div class="modal__row">
+              <span>Углеводы</span>
+              <span class="modal__value"></span>
+            </div>
+          </div>
+          <button class="modal__btn">
+            В корзину за <span class="modal__price"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="cart">
+      <div class="cart__container">
+        <button class="cart__close">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="25"
+            height="25"
+            fill="none"
+            viewBox="0 0 25 25"
+            class="sc-1cyl9gi-1 dJLpvD"
+          >
+            <path
+              fill="#fff"
+              fill-rule="evenodd"
+              d="M9.846 12.499.553 3.205A1.878 1.878 0 0 1 3.208.55L12.5 9.843l9.291-9.29a1.878 1.878 0 0 1 2.655 2.655l-9.29 9.29 9.293 9.294a1.878 1.878 0 0 1-2.655 2.655L12.5 15.154 3.205 24.45A1.878 1.878 0 0 1 .55 21.795z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
+        <h2 class="cart__title"></h2>
+        <div class="cart__body"></div>
+        <div class="cart__total">
+          <p class="cart__totalprice"></p>
+          <button class="cart__buy">
+            <span>К оформлению</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              viewBox="0 0 24 24"
+              class="button-arrow"
+            >
+              <path
+                stroke="white"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m10 18 6-6-6-6"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="cart__alert">
+      <h4 class="cart__alert-title">Добавлено:</h4>
+      <h5 class="cart__alert-name"></h5>
+    </div>
+    <script src="./constans.js"></script>
+    <script src="./api.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
